@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sigma Loot</title>
+<meta name="theme-color" content="#792d12">
+<meta name="description" content="Sigma Loot - Download Now">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1060492977049445');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1060492977049445&ev=PageView&noscript=1"
+alt="">
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #260e05;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 22px 12px;
+}
+
+.page {
+    width: 100%;
+    max-width: 680px;
+    min-height: 900px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 48px;
+    padding: 85px 32px 45px;
+    border: 2px solid rgba(255, 190, 90, .22);
+    background:
+        radial-gradient(ellipse at 50% 24%,
+        rgba(255, 161, 44, .22), transparent 38%),
+        linear-gradient(165deg, #963c16 0%, #70260e 48%,
+        #a4461e 78%, #e7a27c 100%);
+    box-shadow: 0 0 35px rgba(255, 128, 28, .12);
+}
+
+.page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        115deg,
+        transparent 25%,
+        rgba(255, 255, 255, .035) 50%,
+        transparent 75%
+    );
+    pointer-events: none;
+}
+
+.profile-area {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-ring {
+    width: 350px;
+    height: 350px;
+    max-width: 82vw;
+    max-height: 82vw;
+    padding: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffed76, #ffbd29, #ffe67c);
+    box-shadow:
+        0 0 12px #ffce42,
+        0 0 32px rgba(255, 196, 48, .55);
+    animation: glow 2.5s infinite alternate;
+}
+
+.profile-ring img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, .18);
+    filter: grayscale(100%);
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 12px #ffce42,
+                    0 0 24px rgba(255, 196, 48, .35);
+    }
+    to {
+        box-shadow: 0 0 20px #ffe879,
+                    0 0 40px rgba(255, 196, 48, .65);
+    }
+}
+
+.online {
+    position: relative;
+    z-index: 2;
+    margin-top: -5px;
+    padding: 19px 38px;
+    min-width: 230px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ffda39, #ffb900);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    box-shadow: 0 5px 18px rgba(255, 180, 0, .2);
+}
+
+.online-dot {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    margin-top: 36px;
+    font-size: clamp(36px, 7vw, 54px);
+    color: #4dffac;
+    font-weight: 800;
+    text-shadow: 0 0 16px rgba(54, 255, 167, .12);
+}
+
+.subtitle {
+    position: relative;
+    z-index: 1;
+    margin-top: 35px;
+    color: #f5cbb9;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.download-btn {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    min-height: 168px;
+    margin-top: 62px;
+    padding: 24px 12px;
+    border-radius: 48px;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(25px, 5vw, 39px);
+    font-weight: 800;
+    background: linear-gradient(110deg, #ffbd70, #ffcc54);
+    border: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 8px 24px rgba(255, 177, 65, .15);
+    transition: transform .2s, box-shadow .2s;
+    animation: btnGlow 2s infinite alternate;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(255, 197, 77, .3);
+}
+
+.download-btn:active {
+    transform: scale(.98);
+}
+
+.download-icon {
+    font-size: 45px;
+}
+
+@keyframes btnGlow {
+    from { filter: brightness(1); }
+    to { filter: brightness(1.09); }
+}
+
+.divider {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 72px 0 50px;
+    color: #e9b7a0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: rgba(255, 209, 181, .2);
+}
+
+.countdown {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.time-box {
+    min-height: 178px;
+    border-radius: 35px;
+    border: 2px solid rgba(255, 208, 169, .18);
+    background: rgba(255, 210, 170, .055);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: inset 0 0 18px rgba(255,255,255,.015);
+}
+
+.time-number {
+    color: #5bffb2;
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 800;
+}
+
+.time-label {
+    color: #f2c6af;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer-text {
+    position: relative;
+    z-index: 1;
+    margin-top: 45px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #f2cbb8;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px 7px;
+    }
+
+    .page {
+        padding: 65px 18px 35px;
+        border-radius: 38px;
+        min-height: 850px;
+    }
+
+    .profile-ring {
+        width: 285px;
+        height: 285px;
+        padding: 9px;
+    }
+
+    .online {
+        padding: 16px 26px;
+        min-width: 205px;
+        font-size: 17px;
+    }
+
+    h1 {
+        margin-top: 35px;
+    }
+
+    .subtitle {
+        margin-top: 30px;
+        font-size: 23px;
+    }
+
+    .download-btn {
+        min-height: 125px;
+        margin-top: 55px;
+        border-radius: 38px;
+        gap: 12px;
+    }
+
+    .download-icon {
+        font-size: 34px;
+    }
+
+    .divider {
+        margin: 58px 0 38px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .countdown {
+        gap: 8px;
+    }
+
+    .time-box {
+        min-height: 145px;
+        border-radius: 25px;
+        gap: 24px;
+    }
+
+    .time-label {
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <div class="profile-area">
+        <div class="profile-ring">
+            <img
+                src="https://i.postimg.cc/Hkg0wZCP/493656368f14a1887e84fccd66638019.jpg"
+                alt="Sigma Loot Profile"
+            >
+        </div>
+
+        <div class="online">
+            <span class="online-dot"></span>ONLINE
+        </div>
+    </div>
+
+    <h1>Sigma Loot</h1>
+
+    <p class="subtitle">Tips &amp; Tricks</p>
+
+    <a
+        class="download-btn"
+        href="https://d3ca36aesr7v4v.cloudfront.net/?uid=92832425"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="if(typeof fbq==='function'){fbq('trackCustom','DownloadButtonClick');}"
+    >
+        <span class="download-icon">📥</span>
+        <span>DOWNLOAD NOW</span>
+    </a>
+
+    <div class="divider">READY TO JOIN</div>
+
+    <div class="countdown">
+        <div class="time-box">
+            <span class="time-number">00</span>
+            <span class="time-label">DAYS</span>
+        </div>
+
+        <div class="time-box">
+            <span class="time-number">00</span>
+            <span class="time-label">HOURS</span>
+        </div>
+
+        <div class="time-box">
+            <span class="time-number">00</span>
+            <span class="time-label">MINS</span>
+        </div>
+
+        <div class="time-box">
+            <span class="time-number" id="seconds">03</span>
+            <span class="time-label">SECS</span>
+        </div>
+    </div>
+
+    <p class="footer-text">
+        Welcome to Sigma Loot.<br>
+        Tap the button above to continue.
+    </p>
+
+</main>
+
+<script>
+// Visual countdown only; it does not automatically redirect.
+let secondsLeft = 3;
+const secondsElement = document.getElementById("seconds");
+
+const countdownInterval = setInterval(function () {
+    secondsLeft--;
+
+    if (secondsLeft <= 0) {
+        secondsLeft = 0;
+        clearInterval(countdownInterval);
+    }
+
+    secondsElement.textContent = String(secondsLeft).padStart(2, "0");
+}, 1000);
+</script>
+
+</body>
+  </html>
+  
